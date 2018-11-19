@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3799460F21A277D6009EE3F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799460E21A277D6009EE3F1 /* AppDelegate.swift */; };
-		3799461121A277D6009EE3F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799461021A277D6009EE3F1 /* ViewController.swift */; };
+		3799461121A277D6009EE3F1 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799461021A277D6009EE3F1 /* MainMenuViewController.swift */; };
 		3799461421A277D6009EE3F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3799461221A277D6009EE3F1 /* Main.storyboard */; };
 		3799461721A277D6009EE3F1 /* Arcana.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3799461521A277D6009EE3F1 /* Arcana.xcdatamodeld */; };
 		3799461921A277D6009EE3F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3799461821A277D6009EE3F1 /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		3799460B21A277D6009EE3F1 /* Arcana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arcana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3799460E21A277D6009EE3F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3799461021A277D6009EE3F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3799461021A277D6009EE3F1 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		3799461321A277D6009EE3F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3799461621A277D6009EE3F1 /* Arcana.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Arcana.xcdatamodel; sourceTree = "<group>"; };
 		3799461821A277D6009EE3F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				3799460E21A277D6009EE3F1 /* AppDelegate.swift */,
-				3799461021A277D6009EE3F1 /* ViewController.swift */,
+				3799461021A277D6009EE3F1 /* MainMenuViewController.swift */,
 				3799461221A277D6009EE3F1 /* Main.storyboard */,
 				3799461821A277D6009EE3F1 /* Assets.xcassets */,
 				3799461A21A277D6009EE3F1 /* LaunchScreen.storyboard */,
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3799461121A277D6009EE3F1 /* ViewController.swift in Sources */,
+				3799461121A277D6009EE3F1 /* MainMenuViewController.swift in Sources */,
 				3799460F21A277D6009EE3F1 /* AppDelegate.swift in Sources */,
 				3799461721A277D6009EE3F1 /* Arcana.xcdatamodeld in Sources */,
 			);
