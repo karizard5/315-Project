@@ -15,6 +15,7 @@
 		3799461C21A277D6009EE3F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3799461A21A277D6009EE3F1 /* LaunchScreen.storyboard */; };
 		3799462621A27BA7009EE3F1 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799462521A27BA7009EE3F1 /* CharacterDetailViewController.swift */; };
 		3799462821A27D02009EE3F1 /* MainMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799462721A27D02009EE3F1 /* MainMenuTableViewCell.swift */; };
+		3799462A21A27D80009EE3F1 /* AddCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799462921A27D80009EE3F1 /* AddCharacterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3799461D21A277D6009EE3F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3799462521A27BA7009EE3F1 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharacterDetailViewController.swift; path = ../CharacterDetailViewController.swift; sourceTree = "<group>"; };
 		3799462721A27D02009EE3F1 /* MainMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTableViewCell.swift; sourceTree = "<group>"; };
+		3799462921A27D80009EE3F1 /* AddCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCharacterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +65,9 @@
 				3799460E21A277D6009EE3F1 /* AppDelegate.swift */,
 				3799462521A27BA7009EE3F1 /* CharacterDetailViewController.swift */,
 				3799461021A277D6009EE3F1 /* MainMenuTableViewController.swift */,
-				3799461221A277D6009EE3F1 /* Main.storyboard */,
 				3799462721A27D02009EE3F1 /* MainMenuTableViewCell.swift */,
+				3799461221A277D6009EE3F1 /* Main.storyboard */,
+				3799462921A27D80009EE3F1 /* AddCharacterViewController.swift */,
 				3799461821A277D6009EE3F1 /* Assets.xcassets */,
 				3799461A21A277D6009EE3F1 /* LaunchScreen.storyboard */,
 				3799461D21A277D6009EE3F1 /* Info.plist */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3799462A21A27D80009EE3F1 /* AddCharacterViewController.swift in Sources */,
 				3799461121A277D6009EE3F1 /* MainMenuTableViewController.swift in Sources */,
 				3799462621A27BA7009EE3F1 /* CharacterDetailViewController.swift in Sources */,
 				3799460F21A277D6009EE3F1 /* AppDelegate.swift in Sources */,
