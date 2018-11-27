@@ -9,6 +9,8 @@
 import UIKit
 
 class MainMenuTableViewCell: UITableViewCell {
+    
+    @IBOutlet var characterNameLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +21,11 @@ class MainMenuTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func update(with character: Character){
+        guard let characterName = character.name else {return}
+        characterNameLabel.text = characterName
     }
 
 }

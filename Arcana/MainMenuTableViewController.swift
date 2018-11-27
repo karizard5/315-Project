@@ -8,7 +8,59 @@
 
 import UIKit
 
-class MainMenuTableViewController: UIViewController {
+class MainMenuTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    var character: Character? = nil {
+        didSet{
+            
+        }
+    }
+    
+    var characterArray = [Character]()
+    @IBOutlet var characterTableView: UITableView!
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0{
+            return characterArray.count
+        }
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterCell", for: indexPath) as! MainMenuTableViewCell
+        let character = characterArray[indexPath.row]
+        cell.update(with: character)
+        cell.showsReorderControl = true
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath){
+        let character  = characterArray.remove(at: sourceIndexPath.row)
+        characterArray.insert(character, at: destinationIndexPath.row)
+        characterTableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+        if editingStyle == .delete{
+            context.delete(characterArray[indexPath.row])
+            characterArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            saveTrips()
+        }
+    }
+    
+    func saveTrips(){
+        do{
+            try context.save()
+        }
+        catch{
+            print("Error, \(error)")
+        }
+        self.characterTableView.reloadData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
