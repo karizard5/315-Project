@@ -8,7 +8,15 @@
 
 import UIKit
 
-class AddCharacterViewController: UIViewController {
+class AddCharacterViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate {
+    
+    var numCharacters: Int? = nil
+    
+    
+    @IBOutlet var characterNameLabel: UILabel!
+    @IBOutlet var currentCharacterIndexAdditionLabel: UILabel!
+    @IBOutlet var characterNameTextField: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,4 +35,16 @@ class AddCharacterViewController: UIViewController {
     }
     */
 
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    /*  This action allows the keyboard to vanish if the user presses in empty space. */
+    
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer){
+        characterNameTextField.resignFirstResponder()
+    }
+    
 }

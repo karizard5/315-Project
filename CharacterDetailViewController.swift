@@ -10,9 +10,26 @@ import UIKit
 
 class CharacterDetailViewController: UIViewController {
 
+    var character: Character? = nil
+    var characterCount: Int? = nil
+    var characterIndex: Int? = nil
+    
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var characterNumberLabel: UILabel!
+    
+    func displayCharacter(_ character: Character?){
+        if let character = character, let characterCount = characterCount, let characterIndex = characterIndex{
+            let correctedCharacterIndex = characterIndex + 1
+            guard let characterName = character.name else {return}
+            
+            nameLabel.text = characterName
+            characterNumberLabel.text = "Character \(correctedCharacterIndex) of \(characterCount)"
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        displayCharacter(character)
         // Do any additional setup after loading the view.
     }
     

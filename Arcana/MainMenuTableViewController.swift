@@ -61,6 +61,30 @@ class MainMenuTableViewController: UIViewController, UITableViewDataSource, UITa
         }
         self.characterTableView.reloadData()
     }
+    
+//    func loadTrips(){
+//        let request: NSFetchRequest<Character> = Character.fetchRequest()
+//        do{
+//            characterArray = try context.fetch(request)
+//        }
+//        catch {
+//            print("Error loading trips \(error)")
+//        }
+//        self.characterTableView.reloadData()
+//
+//    }
+    
+    
+    func addCharacterToCoreData(_ characterName: String){
+        let newCharacter = Character(context: self.context)
+        newCharacter.name = characterName
+        self.characterArray.append(newCharacter)
+    }
+    
+    @IBAction func editBarPressed(_ sender: UIBarButtonItem){
+        let newEditing = !characterTableView.isEditing
+        characterTableView.setEditing(newEditing, animated: true)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +92,7 @@ class MainMenuTableViewController: UIViewController, UITableViewDataSource, UITa
         print("test")
     }
 
+    
 
 }
 
