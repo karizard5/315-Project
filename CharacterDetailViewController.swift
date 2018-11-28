@@ -15,6 +15,14 @@ class CharacterDetailViewController: UIViewController {
     var characterIndex: Int? = nil
     
     @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var levelLabel: UILabel!
+    @IBOutlet var healthLabel: UILabel!
+    @IBOutlet var charismaLabel: UILabel!
+    @IBOutlet var constitutionLabel: UILabel!
+    @IBOutlet var intelligenceLabel: UILabel!
+    @IBOutlet var strengthLabel: UILabel!
+    @IBOutlet var wisdomLabel: UILabel!
+    @IBOutlet var dexterityLabel: UILabel!
     @IBOutlet var characterNumberLabel: UILabel!
     
     func displayCharacter(_ character: Character?){
@@ -23,6 +31,16 @@ class CharacterDetailViewController: UIViewController {
             guard let characterName = character.name else {return}
             
             nameLabel.text = characterName
+            levelLabel.text = "\(character.level)"
+            healthLabel.text = "\(character.health)"
+            charismaLabel.text = "\(character.charisma)"
+            constitutionLabel.text = "\(character.constituiton)"
+            intelligenceLabel.text = "\(character.intelligence)"
+            strengthLabel.text = "\(character.strength)"
+            wisdomLabel.text = "\(character.wisdom)"
+            dexterityLabel.text = "\(character.dexterity)"
+            
+            
             characterNumberLabel.text = "Character \(correctedCharacterIndex) of \(characterCount)"
         }
     }

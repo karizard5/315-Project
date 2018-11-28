@@ -8,7 +8,6 @@
         <attribute name="intelligence" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="proficiencies" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="strength" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="wisdom" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="skillProficiency" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Skill" inverseName="characterProficiency" inverseEntity="Skill" syncable="YES"/>
@@ -18,7 +17,7 @@
         <relationship name="characterProficiency" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Character" inverseName="skillProficiency" inverseEntity="Character" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Character" positionX="-2987.625" positionY="-728.703125" width="128" height="210"/>
+        <element name="Character" positionX="-2987.625" positionY="-728.703125" width="128" height="195"/>
         <element name="Skill" positionX="-2707.17578125" positionY="-654.87890625" width="128" height="75"/>
     </elements>
 </model>

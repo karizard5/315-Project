@@ -24,7 +24,6 @@ extension Character {
     @NSManaged public var intelligence: Int16
     @NSManaged public var level: Int16
     @NSManaged public var name: String?
-    @NSManaged public var proficiencies: NSObject?
     @NSManaged public var strength: Int16
     @NSManaged public var wisdom: Int16
     @NSManaged public var skillProficiency: Skill?
