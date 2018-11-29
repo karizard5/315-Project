@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MainMenuTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -62,18 +63,37 @@ class MainMenuTableViewController: UIViewController, UITableViewDataSource, UITa
         self.characterTableView.reloadData()
     }
     
-//    func loadTrips(){
-//        let request: NSFetchRequest<Character> = Character.fetchRequest()
-//        do{
-//            characterArray = try context.fetch(request)
-//        }
-//        catch {
-//            print("Error loading trips \(error)")
-//        }
-//        self.characterTableView.reloadData()
-//
-//    }
+    func loadTrips(){
+        let request: NSFetchRequest<Character> = Character.fetchRequest()
+        do{
+            characterArray = try context.fetch(request)
+        }
+        catch {
+            print("Error loading trips \(error)")
+        }
+        self.characterTableView.reloadData()
+
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if let identifier = segue.identifier{
+            if identifier == "DetailSegue"{
+                if let characterDetailVC = segue.destination as? CharacterDetailViewController{
+                    if let indexPath = characterTableView.indexPathForSelectedRow{
+                        let character = characterArray[indexPath.row]
+                        characterDetailVC.character = character
+                        characterDetailVC.characterCount = characterArray.count
+                        characterDetailVC.characterIndex = indexPath.row
+                    }
+                }
+            }
+            else if identifier == "AddSegue"{
+                if let characterAddVC = segue.destination as? AddCharacterViewController{
+                    characterAddVC.numCharacters = characterArray.count + 1
+                }
+            }
+        }
+    }
     
     func addCharacterToCoreData(_ characterName: String){
         let newCharacter = Character(context: self.context)
@@ -90,6 +110,10 @@ class MainMenuTableViewController: UIViewController, UITableViewDataSource, UITa
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("test")
+        let newCharacter = Character(context: self.context)
+        newCharacter.name = "Jon"
+        self.characterArray.append(newCharacter)
+        
     }
 
     
