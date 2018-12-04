@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3775019921ACF9A6003463F5 /* Skill+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3775019521ACF9A6003463F5 /* Skill+CoreDataClass.swift */; };
-		3775019A21ACF9A6003463F5 /* Skill+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3775019621ACF9A6003463F5 /* Skill+CoreDataProperties.swift */; };
 		377501A321ACFAF7003463F5 /* Character+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377501A121ACFAF7003463F5 /* Character+CoreDataClass.swift */; };
 		377501A421ACFAF7003463F5 /* Character+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377501A221ACFAF7003463F5 /* Character+CoreDataProperties.swift */; };
 		3799460F21A277D6009EE3F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799460E21A277D6009EE3F1 /* AppDelegate.swift */; };
@@ -20,11 +18,12 @@
 		3799462621A27BA7009EE3F1 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799462521A27BA7009EE3F1 /* CharacterDetailViewController.swift */; };
 		3799462821A27D02009EE3F1 /* MainMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799462721A27D02009EE3F1 /* MainMenuTableViewCell.swift */; };
 		3799462A21A27D80009EE3F1 /* AddCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799462921A27D80009EE3F1 /* AddCharacterViewController.swift */; };
+		801B0CD021B6FD390053DEDD /* Skill+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801B0CCE21B6FD390053DEDD /* Skill+CoreDataClass.swift */; };
+		801B0CD121B6FD390053DEDD /* Skill+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801B0CCF21B6FD390053DEDD /* Skill+CoreDataProperties.swift */; };
+		801B0CD321B6FE380053DEDD /* ProfficencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801B0CD221B6FE380053DEDD /* ProfficencyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3775019521ACF9A6003463F5 /* Skill+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Skill+CoreDataClass.swift"; sourceTree = "<group>"; };
-		3775019621ACF9A6003463F5 /* Skill+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Skill+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		377501A121ACFAF7003463F5 /* Character+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+CoreDataClass.swift"; sourceTree = "<group>"; };
 		377501A221ACFAF7003463F5 /* Character+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3799460B21A277D6009EE3F1 /* Arcana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arcana.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +37,9 @@
 		3799462521A27BA7009EE3F1 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharacterDetailViewController.swift; path = ../CharacterDetailViewController.swift; sourceTree = "<group>"; };
 		3799462721A27D02009EE3F1 /* MainMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTableViewCell.swift; sourceTree = "<group>"; };
 		3799462921A27D80009EE3F1 /* AddCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCharacterViewController.swift; sourceTree = "<group>"; };
+		801B0CCE21B6FD390053DEDD /* Skill+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Skill+CoreDataClass.swift"; sourceTree = "<group>"; };
+		801B0CCF21B6FD390053DEDD /* Skill+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Skill+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		801B0CD221B6FE380053DEDD /* ProfficencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfficencyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,15 +72,16 @@
 		3799460D21A277D6009EE3F1 /* Arcana */ = {
 			isa = PBXGroup;
 			children = (
+				801B0CCE21B6FD390053DEDD /* Skill+CoreDataClass.swift */,
+				801B0CCF21B6FD390053DEDD /* Skill+CoreDataProperties.swift */,
 				377501A121ACFAF7003463F5 /* Character+CoreDataClass.swift */,
 				377501A221ACFAF7003463F5 /* Character+CoreDataProperties.swift */,
-				3775019521ACF9A6003463F5 /* Skill+CoreDataClass.swift */,
-				3775019621ACF9A6003463F5 /* Skill+CoreDataProperties.swift */,
 				3799460E21A277D6009EE3F1 /* AppDelegate.swift */,
 				3799461021A277D6009EE3F1 /* MainMenuTableViewController.swift */,
 				3799462721A27D02009EE3F1 /* MainMenuTableViewCell.swift */,
 				3799462521A27BA7009EE3F1 /* CharacterDetailViewController.swift */,
 				3799462921A27D80009EE3F1 /* AddCharacterViewController.swift */,
+				801B0CD221B6FE380053DEDD /* ProfficencyCell.swift */,
 				3799461221A277D6009EE3F1 /* Main.storyboard */,
 				3799461821A277D6009EE3F1 /* Assets.xcassets */,
 				3799461A21A277D6009EE3F1 /* LaunchScreen.storyboard */,
@@ -159,14 +162,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				801B0CD321B6FE380053DEDD /* ProfficencyCell.swift in Sources */,
 				3799462A21A27D80009EE3F1 /* AddCharacterViewController.swift in Sources */,
 				377501A321ACFAF7003463F5 /* Character+CoreDataClass.swift in Sources */,
 				3799461121A277D6009EE3F1 /* MainMenuTableViewController.swift in Sources */,
 				3799462621A27BA7009EE3F1 /* CharacterDetailViewController.swift in Sources */,
 				377501A421ACFAF7003463F5 /* Character+CoreDataProperties.swift in Sources */,
-				3775019921ACF9A6003463F5 /* Skill+CoreDataClass.swift in Sources */,
+				801B0CD021B6FD390053DEDD /* Skill+CoreDataClass.swift in Sources */,
 				3799460F21A277D6009EE3F1 /* AppDelegate.swift in Sources */,
-				3775019A21ACF9A6003463F5 /* Skill+CoreDataProperties.swift in Sources */,
+				801B0CD121B6FD390053DEDD /* Skill+CoreDataProperties.swift in Sources */,
 				3799462821A27D02009EE3F1 /* MainMenuTableViewCell.swift in Sources */,
 				3799461721A277D6009EE3F1 /* Arcana.xcdatamodeld in Sources */,
 			);
@@ -315,7 +319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3JWCX4D456;
+				DEVELOPMENT_TEAM = GUYPJD4NUE;
 				INFOPLIST_FILE = Arcana/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +338,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3JWCX4D456;
+				DEVELOPMENT_TEAM = GUYPJD4NUE;
 				INFOPLIST_FILE = Arcana/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
