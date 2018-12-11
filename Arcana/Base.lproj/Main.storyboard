@@ -168,7 +168,7 @@
                                 <rect key="frame" x="0.0" y="291" width="375" height="376"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="35" id="zhu-sN-cO8" customClass="ProfficencyCell" customModule="Arcana" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfficencyCell" rowHeight="35" id="zhu-sN-cO8" customClass="ProfficencyCell" customModule="Arcana" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="35"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zhu-sN-cO8" id="AhK-Sc-MB9">
@@ -414,7 +414,7 @@
                                 <rect key="frame" x="0.0" y="391" width="375" height="276"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="OK7-d7-yCd" customClass="NewProfficencyCell" customModule="Arcana" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewProfficencyCell" id="OK7-d7-yCd" customClass="NewProfficencyCell" customModule="Arcana" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OK7-d7-yCd" id="iAW-LL-IEH">
@@ -425,19 +425,18 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFB-VN-px5">
-                                                            <rect key="frame" x="0.0" y="0.0" width="321" height="43.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="43.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ih1-XY-gGI">
-                                                            <rect key="frame" x="326" y="0.0" width="51" height="43.5"/>
-                                                        </switch>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oec-Ns-fgh">
+                                                            <rect key="frame" x="50" y="0.0" width="325" height="43.5"/>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="Ih1-XY-gGI" secondAttribute="bottom" id="KHG-nZ-q5z"/>
-                                                        <constraint firstItem="Ih1-XY-gGI" firstAttribute="top" secondItem="kDv-Ib-qyE" secondAttribute="top" id="byd-Ae-xrc"/>
-                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -447,6 +446,10 @@
                                                 <constraint firstItem="kDv-Ib-qyE" firstAttribute="leading" secondItem="iAW-LL-IEH" secondAttribute="leading" id="yw8-LW-w3D"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="dFB-VN-px5" id="EuI-Wg-KgM"/>
+                                            <outlet property="valueField" destination="Oec-Ns-fgh" id="OVF-Qq-poH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
