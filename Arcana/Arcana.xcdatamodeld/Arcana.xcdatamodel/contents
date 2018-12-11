@@ -13,7 +13,7 @@
         <relationship name="skillProficiency" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Skill" inverseName="characterProficiency" inverseEntity="Skill" syncable="YES"/>
     </entity>
     <entity name="Skill" representedClassName="Skill" syncable="YES">
-        <attribute name="proficiency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="characterProficiency" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Character" inverseName="skillProficiency" inverseEntity="Character" syncable="YES"/>
     </entity>

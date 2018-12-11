@@ -113,7 +113,7 @@ class MainMenuTableViewController: UIViewController, UITableViewDataSource, UITa
         let newCharacter = Character(context: self.context)
         newCharacter.name = "Jon"
         self.characterArray.append(newCharacter)
-        
+        self.characterTableView.reloadData()
     }
 
     
