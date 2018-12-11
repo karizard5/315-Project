@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import CoreData
 
-class CharacterDetailViewController: UIViewController {
+class CharacterDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
 
     var character: Character? = nil
     var characterCount: Int? = nil
     var characterIndex: Int? = nil
+    var skillArray = [Skill]()
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    @IBOutlet var tableView: UITableView!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var levelLabel: UILabel!
     @IBOutlet var healthLabel: UILabel!
@@ -24,6 +30,21 @@ class CharacterDetailViewController: UIViewController {
     @IBOutlet var wisdomLabel: UILabel!
     @IBOutlet var dexterityLabel: UILabel!
     @IBOutlet var characterNumberLabel: UILabel!
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0{
+            return skillArray.count
+        }
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfficencyCell", for: indexPath) as! ProfficencyCell
+        let skill = skillArray[indexPath.row]
+        cell.update(skill: skill)
+        cell.showsReorderControl = true
+        return cell
+    }
     
     func displayCharacter(_ character: Character?){
         if let character = character, let characterCount = characterCount, let characterIndex = characterIndex{
@@ -40,8 +61,21 @@ class CharacterDetailViewController: UIViewController {
             wisdomLabel.text = "\(character.wisdom)"
             dexterityLabel.text = "\(character.dexterity)"
             
+            loadSkills()
             
             characterNumberLabel.text = "Character \(correctedCharacterIndex) of \(characterCount)"
+        }
+    }
+    
+    func loadSkills(){
+        let request: NSFetchRequest<Skill> = Skill.fetchRequest()
+        let characterPredicate = NSPredicate(format: "parentCategory.name MATCHES %@", character!.name!)
+        request.predicate = characterPredicate
+        
+        do{
+            skillArray = try context.fetch(request)
+        } catch {
+            print("Error getting skills")
         }
     }
     

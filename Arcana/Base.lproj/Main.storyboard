@@ -218,6 +218,7 @@
                         <outlet property="levelLabel" destination="jdu-n4-XY8" id="mrw-Uh-P2l"/>
                         <outlet property="nameLabel" destination="xmm-ki-Gnj" id="WhS-Eh-tU1"/>
                         <outlet property="strengthLabel" destination="bX2-R9-hZU" id="kY9-32-7Fe"/>
+                        <outlet property="tableView" destination="fJk-oV-NZk" id="Yt6-JM-mBp"/>
                         <outlet property="wisdomLabel" destination="jxv-YU-VpX" id="NJH-sG-Dna"/>
                     </connections>
                 </viewController>
