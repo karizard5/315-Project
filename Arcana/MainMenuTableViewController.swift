@@ -39,7 +39,7 @@ class MainMenuTableViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath){
-        let character  = characterArray.remove(at: sourceIndexPath.row)
+        let character = characterArray.remove(at: sourceIndexPath.row)
         characterArray.insert(character, at: destinationIndexPath.row)
         characterTableView.reloadData()
     }
@@ -112,6 +112,20 @@ class MainMenuTableViewController: UIViewController, UITableViewDataSource, UITa
         print("test")
         let newCharacter = Character(context: self.context)
         newCharacter.name = "Jon"
+        newCharacter.level = 14
+        newCharacter.charisma = 14
+        newCharacter.constituiton = 14
+        newCharacter.dexterity = 14
+        newCharacter.health = 14
+        newCharacter.intelligence = 14
+        newCharacter.strength = 14
+        newCharacter.wisdom = 14
+        
+        let newSkill = Skill(context: self.context)
+        newSkill.name = "Athletics"
+        newSkill.value = 14
+        newSkill.characterProficiency = newCharacter
+        newCharacter.skillProficiency = newSkill
         self.characterArray.append(newCharacter)
 
     }
