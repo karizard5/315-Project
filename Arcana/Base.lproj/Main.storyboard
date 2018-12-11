@@ -497,6 +497,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="wlC-bh-XiM"/>
         <segue reference="H6S-wH-NRR"/>
     </inferredMetricsTieBreakers>
 </document>
