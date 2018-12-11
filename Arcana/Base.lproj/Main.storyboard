@@ -194,6 +194,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="aft-W5-WQr" id="EfM-HB-Ck8"/>
+                                    <outlet property="delegate" destination="aft-W5-WQr" id="njV-CL-2Xl"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -477,6 +481,17 @@
                         <barButtonItem key="rightBarButtonItem" title="Done" id="HZj-bG-7fb"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bonusField" destination="M5V-ee-0Qe" id="7SD-SP-z13"/>
+                        <outlet property="charismaField" destination="dn9-iq-G3p" id="gFC-1N-dQB"/>
+                        <outlet property="constitutionField" destination="cGD-mM-uDb" id="gEx-lX-lhW"/>
+                        <outlet property="dexterityField" destination="XmA-do-Q4d" id="HOd-jj-6J0"/>
+                        <outlet property="healthField" destination="U5G-es-3bA" id="BUB-of-945"/>
+                        <outlet property="intelligenceField" destination="QAi-dn-tRm" id="eFQ-Ea-fiB"/>
+                        <outlet property="levelField" destination="V7h-OV-k7O" id="RRc-5I-Gut"/>
+                        <outlet property="nameField" destination="P6f-Vy-v9M" id="egO-df-Hmq"/>
+                        <outlet property="strengthField" destination="Wlm-Ma-y3T" id="a31-rQ-QIv"/>
+                        <outlet property="tableView" destination="rnp-nT-1zc" id="JtU-bp-Zbd"/>
+                        <outlet property="wisdomField" destination="Tqz-Dn-lMQ" id="9qd-8P-2cx"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="SaveUnwindSegue" id="H6S-wH-NRR"/>
                     </connections>
                 </viewController>

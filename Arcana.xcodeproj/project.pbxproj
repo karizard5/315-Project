@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		377501A321ACFAF7003463F5 /* Character+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377501A121ACFAF7003463F5 /* Character+CoreDataClass.swift */; };
-		377501A421ACFAF7003463F5 /* Character+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377501A221ACFAF7003463F5 /* Character+CoreDataProperties.swift */; };
 		3799460F21A277D6009EE3F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799460E21A277D6009EE3F1 /* AppDelegate.swift */; };
 		3799461121A277D6009EE3F1 /* MainMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799461021A277D6009EE3F1 /* MainMenuTableViewController.swift */; };
 		3799461421A277D6009EE3F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3799461221A277D6009EE3F1 /* Main.storyboard */; };
@@ -22,11 +20,11 @@
 		80DE926921BF39B500DE019A /* Skill+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DE926721BF39B500DE019A /* Skill+CoreDataClass.swift */; };
 		80DE926A21BF39B500DE019A /* Skill+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DE926821BF39B500DE019A /* Skill+CoreDataProperties.swift */; };
 		80DE926C21BF40AB00DE019A /* NewProfficencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DE926B21BF40AB00DE019A /* NewProfficencyCell.swift */; };
+		80DE926F21BFA2EC00DE019A /* Character+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DE926D21BFA2EC00DE019A /* Character+CoreDataClass.swift */; };
+		80DE927021BFA2EC00DE019A /* Character+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DE926E21BFA2EC00DE019A /* Character+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		377501A121ACFAF7003463F5 /* Character+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+CoreDataClass.swift"; sourceTree = "<group>"; };
-		377501A221ACFAF7003463F5 /* Character+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3799460B21A277D6009EE3F1 /* Arcana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arcana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3799460E21A277D6009EE3F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3799461021A277D6009EE3F1 /* MainMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTableViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +40,8 @@
 		80DE926721BF39B500DE019A /* Skill+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Skill+CoreDataClass.swift"; sourceTree = "<group>"; };
 		80DE926821BF39B500DE019A /* Skill+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Skill+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		80DE926B21BF40AB00DE019A /* NewProfficencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfficencyCell.swift; sourceTree = "<group>"; };
+		80DE926D21BFA2EC00DE019A /* Character+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+CoreDataClass.swift"; sourceTree = "<group>"; };
+		80DE926E21BFA2EC00DE019A /* Character+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +74,10 @@
 		3799460D21A277D6009EE3F1 /* Arcana */ = {
 			isa = PBXGroup;
 			children = (
+				80DE926D21BFA2EC00DE019A /* Character+CoreDataClass.swift */,
+				80DE926E21BFA2EC00DE019A /* Character+CoreDataProperties.swift */,
 				80DE926721BF39B500DE019A /* Skill+CoreDataClass.swift */,
 				80DE926821BF39B500DE019A /* Skill+CoreDataProperties.swift */,
-				377501A121ACFAF7003463F5 /* Character+CoreDataClass.swift */,
-				377501A221ACFAF7003463F5 /* Character+CoreDataProperties.swift */,
 				3799460E21A277D6009EE3F1 /* AppDelegate.swift */,
 				3799461021A277D6009EE3F1 /* MainMenuTableViewController.swift */,
 				3799462721A27D02009EE3F1 /* MainMenuTableViewCell.swift */,
@@ -167,13 +167,13 @@
 			files = (
 				801B0CD321B6FE380053DEDD /* ProfficencyCell.swift in Sources */,
 				80DE926C21BF40AB00DE019A /* NewProfficencyCell.swift in Sources */,
+				80DE926F21BFA2EC00DE019A /* Character+CoreDataClass.swift in Sources */,
 				3799462A21A27D80009EE3F1 /* AddCharacterViewController.swift in Sources */,
-				377501A321ACFAF7003463F5 /* Character+CoreDataClass.swift in Sources */,
 				80DE926921BF39B500DE019A /* Skill+CoreDataClass.swift in Sources */,
+				80DE927021BFA2EC00DE019A /* Character+CoreDataProperties.swift in Sources */,
 				3799461121A277D6009EE3F1 /* MainMenuTableViewController.swift in Sources */,
 				3799462621A27BA7009EE3F1 /* CharacterDetailViewController.swift in Sources */,
 				80DE926A21BF39B500DE019A /* Skill+CoreDataProperties.swift in Sources */,
-				377501A421ACFAF7003463F5 /* Character+CoreDataProperties.swift in Sources */,
 				3799460F21A277D6009EE3F1 /* AppDelegate.swift in Sources */,
 				3799462821A27D02009EE3F1 /* MainMenuTableViewCell.swift in Sources */,
 				3799461721A277D6009EE3F1 /* Arcana.xcdatamodeld in Sources */,

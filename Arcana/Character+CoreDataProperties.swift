@@ -2,7 +2,7 @@
 //  Character+CoreDataProperties.swift
 //  Arcana
 //
-//  Created by Reid, Jon Carl on 11/26/18.
+//  Created by Gianatassio, Dominic Kanyo on 12/10/18.
 //  Copyright © 2018 Reid, Jon Carl. All rights reserved.
 //
 //
@@ -26,6 +26,7 @@ extension Character {
     @NSManaged public var name: String?
     @NSManaged public var strength: Int16
     @NSManaged public var wisdom: Int16
+    @NSManaged public var bonus: Int16
     @NSManaged public var skillProficiency: Skill?
 
 }
