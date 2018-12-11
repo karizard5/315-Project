@@ -14,8 +14,6 @@ class NewProfficencyCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var valueField: UITextField!
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()

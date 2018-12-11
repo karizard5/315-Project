@@ -189,6 +189,9 @@
                                                 <constraint firstItem="mXP-qF-Nhk" firstAttribute="top" secondItem="AhK-Sc-MB9" secondAttribute="top" id="ZIa-RQ-3bf"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="mXP-qF-Nhk" id="6cf-bC-L4E"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -500,7 +503,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wlC-bh-XiM"/>
         <segue reference="H6S-wH-NRR"/>
     </inferredMetricsTieBreakers>
 </document>

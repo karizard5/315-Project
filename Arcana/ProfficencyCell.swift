@@ -10,6 +10,7 @@ import UIKit
 
 class ProfficencyCell: UITableViewCell {
 
+    @IBOutlet var nameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +20,10 @@ class ProfficencyCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func update(skill: Skill) {
+        nameLabel.text = "\(skill.name!)(\(skill.value))"
     }
 
 }
