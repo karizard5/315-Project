@@ -52,14 +52,14 @@ class CharacterDetailViewController: UIViewController, UITableViewDataSource, UI
             guard let characterName = character.name else {return}
             
             nameLabel.text = characterName
-            levelLabel.text = "\(character.level)"
-            healthLabel.text = "\(character.health)"
-            charismaLabel.text = "\(character.charisma)"
-            constitutionLabel.text = "\(character.constituiton)"
-            intelligenceLabel.text = "\(character.intelligence)"
-            strengthLabel.text = "\(character.strength)"
-            wisdomLabel.text = "\(character.wisdom)"
-            dexterityLabel.text = "\(character.dexterity)"
+            levelLabel.text = "Level: \(character.level)"
+            healthLabel.text = "Health: \(character.health)"
+            charismaLabel.text = "Charisma: \(character.charisma)"
+            constitutionLabel.text = "Constitution: \(character.constituiton)"
+            intelligenceLabel.text = "Intelligence: \(character.intelligence)"
+            strengthLabel.text = "Strength \(character.strength)"
+            wisdomLabel.text = "Wisdom \(character.wisdom)"
+            dexterityLabel.text = "Dexterity \(character.dexterity)"
             
             loadSkills()
             
