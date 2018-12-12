@@ -86,14 +86,25 @@ class CharacterDetailViewController: UIViewController, UITableViewDataSource, UI
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let idenifier = segue.identifier{
+            if idenifier == "DiceSegue"{
+                if let rollSceneVC = segue.destination as? RollSceneController{
+                    if let selectedIndexPath = tableView.indexPathForSelectedRow{
+                        let skill = skillArray[selectedIndexPath.row]
+                        rollSceneVC.skill = skill
+                    }
+                }
+            }
+        }
+        
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

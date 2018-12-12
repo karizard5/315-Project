@@ -12,6 +12,8 @@ import GameplayKit
 
 class RollSceneController: UIViewController {
 
+    var skill: Skill? = nil
+    
     
     @IBOutlet var dieSKView: SKView!
     
@@ -26,7 +28,9 @@ class RollSceneController: UIViewController {
     
     @IBAction func rollDieButtonPressed(_ sender: UIButton) {
         print("roll Die Button Pressed")
+        modifierLabel.text = ""
         animateDie()
+        
     }
     
     override func viewDidLoad() {
@@ -45,16 +49,25 @@ class RollSceneController: UIViewController {
     func animateDie(){
         
         let twoNewTexture = SKAction.animate(with: dieRollingImageNameArray, timePerFrame: 0.1, resize: false, restore: false)
-        let repeatAction = SKAction.repeat(twoNewTexture, count: 6)
+        let repeatAction = SKAction.repeat(twoNewTexture, count: 5)
         //die.run(repeatAction)
         let randomFaceIndex = Int.random(in: 0...19)
         let chooseRandomFace = SKAction.setTexture(dieFaceImageNameArray[randomFaceIndex])
         //die.run(chooseRandomFace)
         let animationSequence = SKAction.sequence([repeatAction, chooseRandomFace])
         die.run(animationSequence)
+        timer = Timer.scheduledTimer(withTimeInterval: 4.0, repeats: false, block: {(Timer) -> Void in
+            self.recognizeRollandUpdateLabel(randomFaceIndex)
+        })
+        
     }
     
-    
+    func recognizeRollandUpdateLabel(_ dieIndex: Int){
+        modifierLabel.text = ""
+        if let skill = skill{
+            modifierLabel.text = "\(dieIndex + 1) + \(skill.value) = \(dieIndex + 1 + Int(skill.value))"
+        }
+    }
 
     /*
     // MARK: - Navigation
