@@ -538,7 +538,7 @@
                         <viewLayoutGuide key="safeArea" id="GMU-la-hOZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add/Edit Character" id="EVZ-F9-xbk">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="HZj-bG-7fb"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="HZj-bG-7fb"/>
                     </navigationItem>
                     <connections>
                         <outlet property="bonusField" destination="M5V-ee-0Qe" id="7SD-SP-z13"/>
