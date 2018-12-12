@@ -516,6 +516,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="KhP-mT-7TL" id="XCF-Ql-sxC"/>
+                                    <outlet property="delegate" destination="KhP-mT-7TL" id="n7S-UD-J4F"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
