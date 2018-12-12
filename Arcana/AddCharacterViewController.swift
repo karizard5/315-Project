@@ -202,7 +202,7 @@ class AddCharacterViewController: UIViewController, UITextFieldDelegate, UINavig
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadInfo()
         // Do any additional setup after loading the view.
     }
     
