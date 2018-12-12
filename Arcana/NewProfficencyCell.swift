@@ -14,6 +14,8 @@ class NewProfficencyCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var valueField: UITextField!
     
+    var skill: Skill? = nil
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,21 +28,22 @@ class NewProfficencyCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func updateSkill(skill: Skill) -> Skill {
-        skill.name = nameLabel.text
-        
-        if let valueString = valueField.text{
-            if let value = Int16(valueString) {
+
+    @IBAction func updateSkill(_ sender: Any) {
+        if let skill = skill{
+            if let valueString = valueField.text, let value = Int16(valueString){
                 skill.value = value
+            } else {
+                update(skill: skill)
             }
         }
         
-        return skill
     }
     
     func update(skill: Skill) {
         nameLabel.text = skill.name
         valueField.text = "\(skill.value)"
+        self.skill = skill
     }
     
 

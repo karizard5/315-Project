@@ -34,5 +34,7 @@ class MainMenuTableViewCell: UITableViewCell {
         characterHealthLabel.text = "Health: \(character.health)"
         
     }
+    
+
 
 }

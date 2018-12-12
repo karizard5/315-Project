@@ -50,18 +50,18 @@ class AddCharacterViewController: UIViewController, UITextFieldDelegate, UINavig
     func loadInfo(){
         if let character = character{
             nameField.text = character.name!
-            levelField.text = "\(character.level)"
-            healthField.text = "\(character.health)"
-            bonusField.text = "\(character.bonus)"
-            strengthField.text = "\(character.strength)"
-            dexterityField.text = "\(character.dexterity)"
-            constitutionField.text = "\(character.constituiton)"
-            intelligenceField.text = "\(character.intelligence)"
-            wisdomField.text = "\(character.wisdom)"
-            charismaField.text = "\(character.charisma)"
+            levelField.text = "Level: \(character.level)"
+            healthField.text = "Health: \(character.health)"
+            bonusField.text = "Bonus: \(character.bonus)"
+            strengthField.text = "Strength: \(character.strength)"
+            dexterityField.text = "Dexterity: \(character.dexterity)"
+            constitutionField.text = "Constitution: \(character.constituiton)"
+            intelligenceField.text = "Intelligence: \(character.intelligence)"
+            wisdomField.text = "Wisdom: \(character.wisdom)"
+            charismaField.text = "Charisma: \(character.charisma)"
             
             let request: NSFetchRequest<Skill> = Skill.fetchRequest()
-            let characterPredicate = NSPredicate(format: "parentCategory.name MATCHES %@", character.name!)
+            let characterPredicate = NSPredicate(format: "characterProficiency.name MATCHES %@", character.name!)
             request.predicate = characterPredicate
             
             do{
@@ -209,7 +209,32 @@ class AddCharacterViewController: UIViewController, UITextFieldDelegate, UINavig
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier{
+            print("got through step 1")
             if identifier == "SaveUnwindSegue"{
+                print("got through step 2")
+                if let mainMenuVC = segue.destination as? MainMenuTableViewController {
+                    print("got through step 3")
+                    guard let name = nameField.text, let healthString = healthField.text, let health = Int16(healthString), let levelString = levelField.text, let level = Int16(levelString), let strengthString = strengthField.text, let strength = Int16(strengthString), let dexterityString = dexterityField.text, let dexterity = Int16(dexterityString), let constitutionString = constitutionField.text, let constitution = Int16(constitutionString), let intelligenceString = intelligenceField.text, let intelligence = Int16(intelligenceString), let wisdomString = wisdomField.text, let wisdom = Int16(wisdomString), let charismaString = charismaField.text, let charisma = Int16(charismaString), let bonusString = bonusField.text, let bonus = Int16(bonusString) else {
+                        print("error thing")
+                        return
+                    }
+                    
+                    if let character = character {
+                        character.name = name
+                        character.bonus = bonus
+                        character.health = health
+                        character.level = level
+                        character.strength = strength
+                        character.dexterity = dexterity
+                        character.constituiton = constitution
+                        character.intelligence = intelligence
+                        character.wisdom = wisdom
+                        character.charisma = charisma
+                        mainMenuVC.characterArray.append(character)
+                        mainMenuVC.saveContext()
+                    }
+                    
+                }
                 
             }
         }
