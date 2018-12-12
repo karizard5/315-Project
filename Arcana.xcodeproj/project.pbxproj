@@ -16,6 +16,7 @@
 		3799462621A27BA7009EE3F1 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799462521A27BA7009EE3F1 /* CharacterDetailViewController.swift */; };
 		3799462821A27D02009EE3F1 /* MainMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799462721A27D02009EE3F1 /* MainMenuTableViewCell.swift */; };
 		3799462A21A27D80009EE3F1 /* AddCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799462921A27D80009EE3F1 /* AddCharacterViewController.swift */; };
+		379D908121C0B28C004303E7 /* RollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379D908021C0B28C004303E7 /* RollViewController.swift */; };
 		801B0CD321B6FE380053DEDD /* ProfficencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801B0CD221B6FE380053DEDD /* ProfficencyCell.swift */; };
 		80DE926921BF39B500DE019A /* Skill+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DE926721BF39B500DE019A /* Skill+CoreDataClass.swift */; };
 		80DE926A21BF39B500DE019A /* Skill+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DE926821BF39B500DE019A /* Skill+CoreDataProperties.swift */; };
@@ -36,6 +37,7 @@
 		3799462521A27BA7009EE3F1 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharacterDetailViewController.swift; path = ../CharacterDetailViewController.swift; sourceTree = "<group>"; };
 		3799462721A27D02009EE3F1 /* MainMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTableViewCell.swift; sourceTree = "<group>"; };
 		3799462921A27D80009EE3F1 /* AddCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCharacterViewController.swift; sourceTree = "<group>"; };
+		379D908021C0B28C004303E7 /* RollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollViewController.swift; sourceTree = "<group>"; };
 		801B0CD221B6FE380053DEDD /* ProfficencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfficencyCell.swift; sourceTree = "<group>"; };
 		80DE926721BF39B500DE019A /* Skill+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Skill+CoreDataClass.swift"; sourceTree = "<group>"; };
 		80DE926821BF39B500DE019A /* Skill+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Skill+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				801B0CD221B6FE380053DEDD /* ProfficencyCell.swift */,
 				80DE926B21BF40AB00DE019A /* NewProfficencyCell.swift */,
 				3799461221A277D6009EE3F1 /* Main.storyboard */,
+				379D908021C0B28C004303E7 /* RollViewController.swift */,
 				3799461821A277D6009EE3F1 /* Assets.xcassets */,
 				3799461A21A277D6009EE3F1 /* LaunchScreen.storyboard */,
 				3799461D21A277D6009EE3F1 /* Info.plist */,
@@ -172,6 +175,7 @@
 				80DE926921BF39B500DE019A /* Skill+CoreDataClass.swift in Sources */,
 				80DE927021BFA2EC00DE019A /* Character+CoreDataProperties.swift in Sources */,
 				3799461121A277D6009EE3F1 /* MainMenuTableViewController.swift in Sources */,
+				379D908121C0B28C004303E7 /* RollViewController.swift in Sources */,
 				3799462621A27BA7009EE3F1 /* CharacterDetailViewController.swift in Sources */,
 				80DE926A21BF39B500DE019A /* Skill+CoreDataProperties.swift in Sources */,
 				3799460F21A277D6009EE3F1 /* AppDelegate.swift in Sources */,
