@@ -75,6 +75,17 @@ class MainMenuTableViewController: UIViewController, UITableViewDataSource, UITa
 
     }
     
+    func saveContext(){
+        print("its definetly calling it")
+        do {
+            try context.save() // like a git commit
+        }
+        catch {
+            print("Error saving categories")
+        }
+        self.characterTableView.reloadData()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if let identifier = segue.identifier{
             if identifier == "DetailSegue"{
@@ -108,30 +119,11 @@ class MainMenuTableViewController: UIViewController, UITableViewDataSource, UITa
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        print("test")
-        let newCharacter = Character(context: self.context)
-        newCharacter.name = "Jon"
-        newCharacter.level = 14
-        newCharacter.charisma = 14
-        newCharacter.constituiton = 14
-        newCharacter.dexterity = 14
-        newCharacter.health = 14
-        newCharacter.intelligence = 14
-        newCharacter.strength = 14
-        newCharacter.wisdom = 14
-        
-        let newSkill = Skill(context: self.context)
-        newSkill.name = "Athletics"
-        newSkill.value = 14
-        newSkill.characterProficiency = newCharacter
-        newCharacter.skillProficiency = newSkill
-        self.characterArray.append(newCharacter)
-        
-        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        print(documentsDirectory)
+        loadTrips()
     }
 
+    @IBAction func unwind(segue: UIStoryboardSegue){
+    }
     
 
 }
