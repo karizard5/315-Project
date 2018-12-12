@@ -12,6 +12,10 @@ class MainMenuTableViewCell: UITableViewCell {
     
     @IBOutlet var characterNameLabel: UILabel!
 
+    @IBOutlet var characterLevelLabel: UILabel!
+    
+    @IBOutlet var characterHealthLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,6 +30,9 @@ class MainMenuTableViewCell: UITableViewCell {
     func update(with character: Character){
         guard let characterName = character.name else {return}
         characterNameLabel.text = characterName
+        characterLevelLabel.text = "Level: \(character.level)"
+        characterHealthLabel.text = "Health: \(character.health)"
+        
     }
 
 }
