@@ -66,6 +66,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="characterTableView" destination="zoo-f0-GzR" id="YHh-4p-fr6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -519,6 +522,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="wlC-bh-XiM"/>
         <segue reference="H6S-wH-NRR"/>
     </inferredMetricsTieBreakers>
 </document>
