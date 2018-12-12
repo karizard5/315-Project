@@ -127,7 +127,9 @@ class MainMenuTableViewController: UIViewController, UITableViewDataSource, UITa
         newSkill.characterProficiency = newCharacter
         newCharacter.skillProficiency = newSkill
         self.characterArray.append(newCharacter)
-
+        
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        print(documentsDirectory)
     }
 
     

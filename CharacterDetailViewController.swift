@@ -69,7 +69,7 @@ class CharacterDetailViewController: UIViewController, UITableViewDataSource, UI
     
     func loadSkills(){
         let request: NSFetchRequest<Skill> = Skill.fetchRequest()
-        let characterPredicate = NSPredicate(format: "parentCategory.name MATCHES %@", character!.name!)
+        let characterPredicate = NSPredicate(format: "characterProficiency.name MATCHES %@", character!.name!)
         request.predicate = characterPredicate
         
         do{
